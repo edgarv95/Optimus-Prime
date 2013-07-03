@@ -1,9 +1,0 @@
-<!DOCTYPE html>
-<html>
-<body>
-
-<embed src ="picks.wav" autostart="true" loop="true" volume="60" hidden ="true"/>
-
-
-</body>
-</html>
