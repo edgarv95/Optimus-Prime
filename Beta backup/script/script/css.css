@@ -1,0 +1,28 @@
+body{background-color: #408080
+}
+
+#textfield{
+margin-left: 550px;
+margin-top:-330px;
+height: 350px;
+width: 600px;
+overflow: auto;
+background-color:#4f8f8f;
+font-family: Arial;
+font-size:16px;
+font-weight: bold;
+
+}
+#console{
+border: solid #408080 5px;
+}
+
+h1{
+margin-top: -320px;
+margin-left: 350px;
+position: absolute;
+}
+
+#mycanvas{
+margin-top:000px;
+}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="script/jquery.js"></script>
+	<link rel=stylesheet href="script/css.css" type="text/css" />
+	<title>Game</title>
+
+</head>
+
+<body> <canvas id="mycanvas" width="600" height="325" style = > </canvas>
+
+<script>
+var canvas = document.getElementById("mycanvas");
+var ctx = canvas.getContext("2d");
+
+//Closed Cell---------------
+var image = new Image();
+image.src = "ClosedCellScene1.png";
+
+var image2 = new Image();
+image2.src = "ClosedCellScene2.png";
+
+var image3 = new Image();
+image3.src = "ClosedCellScene3.png";
+
+//Open Cell
+var image1f = new Image();
+image1f.src = "OpenCellScene1.png";
+
+var image2f = new Image();
+image2f.src = "OpenCellScene2.png";
+
+var image3f = new Image();
+image3f.src = "OpenCellScene3.png";
+
+
+//Hall-------------------------
+var image1b = new Image();
+image1b.src = "CellHall1.png";
+
+var image2b = new Image();
+image2b.src = "CellHall2.png";
+
+var image3b = new Image();
+image3b.src = "CellHall3.png";
+
+//Hall With ladder--------------
+var image1i = new Image();
+image1i.src = "CellHallLadder1.png";
+
+var image2i = new Image();
+image2i.src = "CellHallLadder2.png";
+
+var image3i = new Image();
+image3i.src = "CellHallLadder3.png";
+
+
+//Cafeteria----------------------
+var image1c = new Image();
+image1c.src = "CafeteriaKnifeHall1.png";
+
+var image2c = new Image();
+image2c.src = "CafeteriaKnifeHall2.png";
+
+var image3c = new Image();
+image3c.src = "CafeteriaKnifeHall3.png";
+
+//Cafeteria
+var image1g = new Image();
+image1g.src = "CafeteriaHall1.png";
+
+var image2g = new Image();
+image2g.src = "CafeteriaHall2.png";
+
+var image3g = new Image();
+image3g.src = "CafeteriaHall3.png";
+
+
+//Library With Ladder---------------
+var image1d = new Image();
+image1d.src = "Library1.png";
+
+var image2d = new Image();
+image2d.src = "Library2.png";
+
+var image3d = new Image();
+image3d.src = "Library3.png";
+
+//Library Without Ladder
+var image1e = new Image();
+image1e.src = "LibraryNoLadder1.png";
+
+var image2e = new Image();
+image2e.src = "LibraryNoLadder2.png";
+
+var image3e = new Image();
+image3e.src = "LibraryNoLadder3.png";
+
+
+//Freedom
+var image1h = new Image();
+image1h.src = "Yay2.png";
+
+var image2h = new Image();
+image2h.src = "Yay3.png";
+
+var image3h = new Image();
+image3h.src = "Yay4.png";
+
+var image4h = new Image();
+image4h.src = "Yay5.png";
+
+var image5h = new Image();
+image5h.src = "Yay6.png";
+
+
+
+
+
+
+var imgArray = new Array();
+imgArray[0] = image;
+imgArray[1] = image2;
+imgArray[2] = image3;
+//-----100-------------
+imgArray[100] = image1f;
+imgArray[101] = image2f;
+imgArray[102] = image3f;
+//-------3-------------
+imgArray[4] = image1b;
+imgArray[5] = image2b;
+imgArray[6] = image3b;
+//-----103-------------
+imgArray[144] = image1i;
+imgArray[145] = image2i;
+imgArray[146] = image3i;
+//-------7-------------
+imgArray[8] = image1c;
+imgArray[9] = image2c;
+imgArray[10] = image3c;
+//------107-------------
+imgArray[107] = image1g;
+imgArray[108] = image2g;
+imgArray[109] = image3g;
+//-------11------------
+imgArray[12] = image1d;
+imgArray[13] = image2d;
+imgArray[14] = image3d;
+//-------15------------
+imgArray[16] = image1e;
+imgArray[17] = image2e;
+imgArray[18] = image3e;
+//-------29------------
+imgArray[30] = image1h;
+imgArray[31] = image2h;
+imgArray[32] = image3h;
+imgArray[33] = image4h;
+imgArray[34] = image5h;
+var starter = 0;
+var cur = 0;
+
+
+//image.onload= function(){
+	setInterval(function() {
+		if (cur == 3) { cur = 0;}
+		ctx.clearRect(0, 0, 600, 400);
+		ctx.drawImage(imgArray[starter + cur], 0, 0, 500, 325);
+		cur++;
+		
+		}, 300);	
+	//}
+
+</script>
+<div id="textfield">
+
+<div id="console">
+<p id="message_startgame">Caged Bird</p>
+<p id="message_startgame">You must type commands to advance. Type "help" for a list of commands.</p>
+<p id="message_startgame">You are awakened by a noise in the middle of the night.
+	You lift yourself off your cot and stand in the middle of the concrete and
+	iron cell you have inhabited for months. Peering through the bars, you see
+	that the guard sleeping nearby has dropped his keys.</p>
+	
+<p id="message_cell">	Nearby you see a window, your cot, and your relief. South of you is a hallway.</p>
+
+<!--
+PLACEHOLDER: THIS IS WHERE EVERYTHING WILL BE INSERTED BEFORE -->
+
+
+<div id ="placeholder"></div>
+</div>
+
+<div>
+<form id="form" onsubmit="return false;">
+<input type ="text" size="50" autofocus="autofocus" id="command_line"/>
+</form>
+
+
+</div>
+</div>
+
+<script type="text/javascript"src="script/game.js"></script>
+
+<audio autoplay>
+<source src = "bob.mp3">
+<a href="http://www.youtube-mp3.org/#v=RC6g7q2gq_g">Minecraft Music 6/12 - Mice on Venus (piano3.ogg)</a>
+</audio>
+
+
+</body>
+
+</html>
